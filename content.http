@@ -1,0 +1,41 @@
+GET http://localhost:8080/api/content
+Content-Type: application/json
+
+### Get by id
+GET http://localhost:8080/api/content/{{id}}
+
+
+### Save a content
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "",
+  "desc": "My second Blog",
+  "status": "IDEA",
+  "ContentType": "ARTICLE",
+  "dateCreated": "2024-01-08T16:53:13.606177",
+  "dateUpdated": null,
+  "url": ""
+  }
+
+### Update existing Content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+"id": 2,
+"title": "My second blog",
+"desc": "My second Blog",
+"status": "IDEA",
+"ContentType": "ARTICLE",
+"dateCreated": "2024-01-08T16:53:13.606177",
+"dateUpdated": "2024-01-08T16:53:13.606177",
+"url": ""
+}
+
+### Remove by id
+DELETE http://localhost:8080/api/content/1
+Content-Type: application/json
+
